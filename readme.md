@@ -121,3 +121,4 @@
   N ◀──── N      Many to Many (via junction table)
   (FK)           Foreign Key
   (PK)           Primary Key
+  

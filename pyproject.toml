@@ -1,0 +1,21 @@
+[project]
+name = "school-managemnt-software"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "celery>=5.6.3",
+    "django>=6.0.3",
+    "django-celery-beat>=2.9.0",
+    "django-celery-results>=2.6.0",
+    "django-cors-headers>=4.9.0",
+    "django-environ>=0.13.0",
+    "django-filter>=25.2",
+    "djangorestframework>=3.17.1",
+    "djangorestframework-simplejwt>=5.5.1",
+    "drf-spectacular>=0.29.0",
+    "pillow>=12.1.1",
+    "psycopg2-binary>=2.9.11",
+    "redis>=7.4.0",
+]

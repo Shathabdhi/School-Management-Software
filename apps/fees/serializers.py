@@ -6,13 +6,14 @@ from apps.accounts.serializers import StudentSerializer
 from .models import FeePayment, FeeStructure
 
 
-class FeeStructireSerializer(serializers.ModelSerializer):
+class FeeStructureSerializer(serializers.ModelSerializer):
     academic_year = AcademicYearSerializer(read_only=True)
     class_assigned = ClassSerializer(read_only=True)
 
     class Meta:
         model = FeeStructure
         fields = [
+            "id",
             "academic_year",
             "class_assigned",
             "fee_type",
@@ -21,12 +22,12 @@ class FeeStructireSerializer(serializers.ModelSerializer):
             "is_optional",
             "description",
         ]
-        read_only_field = ["id"]
+        read_only_fields = ["id"]
 
 
 class FeePaymentSerializer(serializers.ModelSerializer):
     student = StudentSerializer(read_only=True)
-    fee_structure = FeeStructireSerializer(read_only=True)
+    fee_structure = FeeStructureSerializer(read_only=True)
 
     class Meta:
         model = FeePayment
@@ -42,4 +43,4 @@ class FeePaymentSerializer(serializers.ModelSerializer):
             "status",
             "notes",
         ]
-        required_fields = ["id"]
+        read_only_fields = ["id"]

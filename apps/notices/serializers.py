@@ -6,7 +6,7 @@ from apps.accounts.serializers import UserSerializer
 from .models import Notice
 
 
-class NoticeSerializer(serializers.ModelSerialize):
+class NoticeSerializer(serializers.ModelSerializer):
     school = SchoolSerializer(read_only=True)
     created_by = UserSerializer(read_only=True)
 
@@ -18,7 +18,8 @@ class NoticeSerializer(serializers.ModelSerialize):
             "created_by",
             "audience",
             "title",
-            "attachmentcontent",
+            "attachment",
+            "content",
             "is_published",
             "published_at",
             "created_at",

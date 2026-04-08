@@ -19,7 +19,6 @@ class AttendanceSerializer(serializers.ModelSerializer):
             "class_subject",
             "date",
             "status",
-            "choices",
             "remarks",
             "marked_by",
         ]

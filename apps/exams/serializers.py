@@ -42,5 +42,13 @@ class ExamResultSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ExamResult
-        fields = ["id", "marks_obtained", "grade", "remarks", "is_absent"]
+        fields = [
+            "id",
+            "exam_schedule",
+            "student",
+            "marks_obtained",
+            "grade",
+            "remarks",
+            "is_absent",
+        ]
         read_only_fields = ["id"]
